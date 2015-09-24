@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Календар болельщика</title>
+</head>
+<body>
+    <div>
+        <h3>Рассписание матчей</h3>
+        <table>
+            <tr>
+                <td><p>Начало трансляции</p></td>
+                <td><p>Играют</p></td>
+                <td><p>Соревнование</p><n/td>
+                <td><p>Канал</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Matches)
+            {
+                <tr>
+                    <td><p>@b.Date</p></td>
+                    <td><p>@b.Match</p></td>
+                    <td><p>@b.Competition</p></td>
+                    <td><p>@b.Chanel</p></td>
+                    
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
